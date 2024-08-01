@@ -1,0 +1,49 @@
+#app {
+  $content-padding: 7.5rem;
+
+  min-width: 375px;
+
+  .content {
+    &.app-content {
+      @include media-breakpoint-up(lg) {
+        padding-left: #{$content-padding};
+        padding-right: #{$content-padding};
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-top: 5rem !important;
+      }
+
+      &.cekbrand-callback {
+        min-width: 750px;
+      }
+
+      &.cekbrand-dashboard {
+        .content-wrapper {
+          max-width: 1200px;
+          width: 100%;
+        }
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &.apps {
+    &-cekbrand, &-cekbrand-onboarding {
+      .content.app-content {
+        padding: 5rem 0 0 0 !important;
+        @include media-breakpoint-down(md) {
+          padding: 4.5rem 0 0 0 !important;
+        }
+      }
+    }
+
+    &-cekbrand-dashboard,
+    &-cekbrand-re-authorization {
+      @include media-breakpoint-down(xs) {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+export default [
+  {
+    title: 'Beranda',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store/beranda`,
+    icon: 'HomeIcon',
+    resource: 'Account',
+    action: 'manage',
+    children: [],
+  },
+  {
+    title: 'Store',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store`,
+    icon: 'ShoppingBagIcon',
+    resource: 'Account',
+    action: 'manage',
+  },
+  {
+    title: 'Riwayat Pembelian',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store/payment/history/event/ticket`,
+    icon: 'TagIcon',
+    resource: 'Account',
+    action: 'manage',
+  },
+  {
+    title: 'Event',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store/event`,
+    icon: 'CalendarIcon',
+    resource: 'Auth',
+    action: 'read',
+  },
+  {
+    title: 'FAQ',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store/faq`,
+    icon: 'HelpCircleIcon',
+    resource: 'Auth',
+    action: 'read',
+  },
+  {
+    title: 'Blog & Artikel',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store/blog`,
+    icon: 'BookOpenIcon',
+    resource: 'Auth',
+    action: 'read',
+  },
+  {
+    title: 'Feedback',
+    href: `${process.env.VUE_APP_WAS_SITE_URL}/#/store/beranda?feedback=active`,
+    icon: 'MessageCircleIcon',
+    resource: 'Account',
+    action: 'manage',
+  },
+]

@@ -1,0 +1,63 @@
+//  ================================================================================================
+//  ? TIP:  It is recommended to use this file for overriding bootstrap variables.
+//  ================================================================================================
+
+// Color system
+$gray-250: #c9cbcb;
+$black: #283138 !default;
+
+$green: #44b51f !default; //$success
+$blue-light: #f9fafe;
+$blue-dark: #195589;
+$pink: #f5317f;
+
+$primary: #368ac8 !default;
+$primary-secondary: #70add9;
+$dark: #1e1e1e !default;
+
+// Product colors
+$product-button-disabled-color: #c9cbcd;
+$product-red: #af1d11;
+$product-orange: #c25518;
+$product-yellow: #d3ae3c;
+$product-green: #1e5d5a;
+$product-greygreen: #90b6bb;
+$product-purple: #c0a9f7;
+
+// Background gradient
+$gradient-primary: linear-gradient(
+    279.57deg,
+    $primary-secondary 0%,
+    $primary 100%
+  ),
+  $primary !default;
+$gradient-pink: linear-gradient(
+    90deg,
+    $pink 0%,
+    rgba(245, 49, 127, 0) 100%
+  ),
+  #ff7c6e !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color: #5e646a;
+$headings-color: #5e646a;
+
+//  ------------------------------
+//    Main Menu
+//  ------------------------------
+
+// vertical menu
+$menu-expanded-width: 256px;
+$menu-collapsed-width: 0px;
+
+//  ------------------------------
+//    Sidebar
+//  -------------------------------
+$sidebar-width: 256px;
+$chat-sidebar-width: 360px;
+
+// Tooltips
+
+$tooltip-bg: white !default;

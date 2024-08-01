@@ -1,0 +1,8 @@
+version: "3"
+services:
+  toba-app:
+    build:
+      context: .
+    ports:
+      - "9702:8080"
+    restart: always

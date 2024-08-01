@@ -1,0 +1,216 @@
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@core/scss/base/components/include';
+@import '@/assets/scss/variables/variables';
+
+.product-card {
+  &.bg {
+    &-red {
+      .btn-outline {
+        border: 1px solid $product-red !important;
+        color: $product-red !important;
+      }
+      .btn-fill {
+        border-color: $product-red !important;
+        background-color: $product-red !important;
+
+        &.disabled {
+          border-color: $product-button-disabled-color !important;
+          background-color: $product-button-disabled-color !important;
+        }
+      }
+      .feather {
+        fill: $product-red !important;
+        stroke: $product-red !important;
+      }
+    }
+    &-orange {
+      .btn-outline {
+        border: 1px solid $product-orange !important;
+        color: $product-orange !important;
+      }
+      .btn-fill {
+        border-color: $product-orange !important;
+        background-color: $product-orange !important;
+
+        &.disabled {
+          border-color: $product-button-disabled-color !important;
+          background-color: $product-button-disabled-color !important;
+        }
+      }
+      .feather {
+        fill: $product-orange !important;
+        stroke: $product-orange !important;
+      }
+    }
+    &-yellow {
+      .btn-outline {
+        border: 1px solid $product-yellow !important;
+        color: $product-yellow !important;
+      }
+      .btn-fill {
+        border-color: $product-yellow !important;
+        background-color: $product-yellow !important;
+
+        &.disabled {
+          border-color: $product-button-disabled-color !important;
+          background-color: $product-button-disabled-color !important;
+        }
+      }
+      .feather {
+        fill: $product-yellow !important;
+        stroke: $product-yellow !important;
+      }
+    }
+    &-green {
+      .btn-outline {
+        border: 1px solid $product-green !important;
+        color: $product-green !important;
+      }
+      .btn-fill {
+        border-color: $product-green !important;
+        background-color: $product-green !important;
+
+        &.disabled {
+          border-color: $product-button-disabled-color !important;
+          background-color: $product-button-disabled-color !important;
+        }
+      }
+      .feather {
+        fill: $product-green !important;
+        stroke: $product-green !important;
+      }
+    }
+    &-greygreen {
+      .btn-outline {
+        border: 1px solid $product-greygreen !important;
+        color: $product-greygreen !important;
+      }
+      .btn-fill {
+        border-color: $product-greygreen !important;
+        background-color: $product-greygreen !important;
+
+        &.disabled {
+          border-color: $product-button-disabled-color !important;
+          background-color: $product-button-disabled-color !important;
+        }
+      }
+      .feather {
+        fill: $product-greygreen !important;
+        stroke: $product-greygreen !important;
+      }
+    }
+    &-purple {
+      .btn-outline {
+        border: 1px solid $product-purple !important;
+        color: $product-purple !important;
+      }
+      .btn-fill {
+        border-color: $product-purple !important;
+        background-color: $product-purple !important;
+
+        &.disabled {
+          border-color: $product-button-disabled-color !important;
+          background-color: $product-button-disabled-color !important;
+        }
+      }
+      .feather {
+        fill: $product-purple !important;
+        stroke: $product-purple !important;
+      }
+    }
+  }
+  .card {
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 13%) !important;
+    border-radius: 4px;
+    margin: 0px 0px 20px 0px;
+
+    width: 307px;
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+    .card-img-overlay {
+      padding: 0px;
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card-content {
+        background-color: white;
+        border-radius: 0px 16px 0px 0px;
+        height: 190px;
+        padding: 16px 16px 10px 16px;
+
+        .active-period {
+          height: 17.5px;
+          font-weight: 500;
+          font-size: 12px;
+        }
+        .btn {
+          width: 130px;
+          height: 36px;
+
+          &-outline {
+            background-color: transparent !important;
+          }
+        }
+        .card-text {
+          margin: 0px;
+          height: 95px;
+
+          white-space: initial;
+          overflow: auto;
+
+          flex-grow: 1;
+          direction: rtl;
+
+          &::-webkit-scrollbar {
+            width: 5px;
+          }
+
+          /* Track */
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: rgb(204, 204, 204);
+          }
+
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: rgb(153, 153, 153);
+          }
+
+          a {
+            text-decoration: revert;
+          }
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+      .card-title {
+        border-radius: 4px;
+        color: white;
+        padding: 0px 0px 0px 40px;
+
+        flex-grow: 1;
+        margin: 0px;
+
+        h3 {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+
+hr {
+  margin-top: 1.15rem;
+  margin-bottom: 1.15rem;
+}

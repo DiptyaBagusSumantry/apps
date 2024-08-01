@@ -1,0 +1,25 @@
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@core/scss/base/components/include';
+@import '@/assets/scss/variables/variables';
+
+.sidebar-toggler {
+  position: absolute;
+  height: 56px;
+  left: 0px;
+  top: 184px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  border-radius: 0px 4px 4px 0px;
+
+  p {
+    height: 16px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .sidebar-toggler {
+    display: none !important;
+  }
+}

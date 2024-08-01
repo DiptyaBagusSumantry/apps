@@ -1,0 +1,511 @@
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@core/scss/base/bootstrap-extended/utilities';
+@import '@/assets/scss/variables/variables';
+
+#dashboard-kompetitor {
+  padding: 1rem;
+  .section-title {
+    h2 {
+      margin-right: 10px;
+    }
+  }
+  .account {
+    &-list {
+      padding: 24px 40px 22px 40px;
+      margin-bottom: 40px;
+
+      & > div:first-child {
+        margin-bottom: 24px;
+      }
+    }
+    &-performa {
+      padding: 32px 42px;
+
+      hr {
+        margin-top: 5px;
+        margin-bottom: 16px;
+        border-top: 1px solid #e9eaeb;
+      }
+    }
+  }
+}
+
+.dashboard-kompetitor-accounts {
+  .overflow-x {
+    overflow-x: auto;
+
+      /* width */
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #ffffff;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #e9eaeb;
+      border-radius: 3px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #a1a1a1;
+    }
+  }
+  .b-avatar {
+    &-img {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
+        0 2px 4px 0 rgba(0, 0, 0, 0.04) !important;
+    }
+  }
+  .account-label-absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .account {
+    &-label {
+      width: 74px !important;
+      height: 24px !important;
+      background-color: $primary !important;
+      color: #ffffff;
+      border-radius: 4px 0px 8px 0px !important;
+      span {
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+    &-delete {
+      width: 74px !important;
+      height: 24px !important;
+    }
+  }
+  .card {
+    &.account-item {
+      min-width: 136px;
+      height: 200px;
+      padding: 40px 0px 12px 0px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13) !important;
+      border-radius: 4px;
+      position: relative;
+
+      & > div:first-child {
+        height: inherit;
+      }
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+      .remove-account {
+        width: 100px;
+        height: 28px;
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+  }
+  .btn-purple-gradient {
+    border-color: #ff63de;
+    /* Fallback: Set a background color. */
+    background-color: #ff63de;
+
+    /* Create the gradient. */
+    background-image: linear-gradient(279.9deg, #b122e5, rgba(177, 34, 229, 0));
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  .dashboard-kompetitor-add-accounts {
+    .card {
+      &.add-account {
+        width: 136px;
+        height: 200px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13) !important;
+        border-radius: 4px;
+
+        div {
+          height: inherit;
+
+          span {
+            font-size: 12px;
+            line-height: 150%;
+          }
+          .feather {
+            margin-bottom: 15.5px;
+          }
+        }
+        .text-purple-gradient {
+          /* Fallback: Set a background color. */
+          background-color: #ff63de;
+
+          /* Create the gradient. */
+          background-image: linear-gradient(
+            279.9deg,
+            #b122e5,
+            rgba(177, 34, 229, 0)
+          );
+
+          /* Set the background size and repeat properties. */
+          background-size: 100%;
+          background-repeat: repeat;
+
+          /* Use the text as a mask for the background. */
+          /* This will show the gradient as a text color rather than element bg. */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+}
+#remove-competitor-modal,
+#add-competitor-modal {
+  .modal-header {
+    display: none;
+  }
+  .modal-content {
+    max-width: 400px;
+  }
+  .btn {
+    width: 165px !important;
+  }
+  .form-control {
+    font-weight: 400 !important;
+  }
+  .button-group {
+    margin-top: 32px !important;
+  }
+}
+#first-add-competitor-modal {
+  .modal-dialog {
+    .modal-content {
+      .content-left {
+        max-width: 420px;
+      }
+      .content-right {
+        @include media-breakpoint-up(md) {
+          max-width: 500px;
+        }
+
+        .input-group {
+          .btn {
+            @extend .font-small-3;
+            width: 80px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+          }
+          .form-control {
+            @extend .font-small-3;
+
+            &.is-invalid, &.is-valid {
+              background-image: none;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.dashboard-kompetitor-performa {
+  .performa-container {
+    @include media-breakpoint-down(md) {
+      background: none;
+    }
+    background: #f4f5f5;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: fit-content;
+    &.main-account {
+      background: linear-gradient(
+          279.57deg,
+          $primary-secondary 0%,
+          $primary 100%
+        ),
+        $primary;
+      @include media-breakpoint-down(md) {
+        background: none !important;
+      }
+    }
+    & > div {
+      width: 240px;
+      @media (max-width: 678px) {
+          width: 200px !important;
+        }
+      height: 170px;
+      margin: 4px 0px 4px 0px;
+      padding: 16px 0px;
+      border-radius: 4px;
+      background: white;
+
+      p {
+        font-size: 14px;
+        line-height: 16px;
+        color: #5e646a;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+        color: #5e646a;
+        margin-bottom: 4px;
+      }
+      .value {
+        &-growth {
+          margin-bottom: 4px;
+          span {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+        &-compare {
+          font-size: 12px;
+          line-height: 16px;
+          color: #93989b;
+        }
+      }
+    }
+  }
+}
+
+.select-kompetitor-option {
+  .vs__actions {
+    padding-right: 10px !important;
+  }
+  .vs--open {
+    .vs__selected-options {
+      .vs__selected {
+        padding-top: 7px !important;
+      }
+    }
+  }
+  .vs__dropdown-menu {
+    & > li {
+      background-color: white !important;
+      color: black !important;
+      &:hover {
+        color: white !important;
+        background-color: $primary !important;
+      }
+    }
+  }
+  .vs__open-indicator {
+    fill: transparent;
+  }
+  .mobile-version.v-select {
+    background-color: #ffffff;
+    border: #c9cbcd solid 2px;
+    color: black;
+    .vs__selected-options {
+      span.vs__selected {
+        color: black;
+        margin: 5px 2px 0px 2px !important;
+      }
+    }
+    .vs__actions {
+      span.feather-icon {
+        margin: 5px 2px 0px 2px !important;
+      }
+    }
+  }
+  .v-select {
+    & > div {
+      cursor: pointer;
+      border: none;
+      font-weight: 500;
+      height: inherit;
+    }
+    color: white;
+    padding: 0 1px;
+
+    @media (max-width: 500px) {
+      padding: 0 2px;
+    }
+    .vs__actions {
+      & > svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .vs__selected-options {
+      min-width: 120px;
+      span.vs__selected {
+        margin: 5px 2px 0px 2px !important;
+        color: white;
+        font-size: 14px;
+      }
+      input.vs__search {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .vs__actions {
+      span.feather-icon {
+        margin: 5px 2px 0px 2px !important;
+      }
+    }
+  }
+}
+
+.dashboard-kompetitor-top-content {
+  .top-content-container {
+    @include media-breakpoint-down(md) {
+      background: none;
+    }
+    background: #f4f5f5;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: fit-content;
+    &.main-account {
+      background: linear-gradient(
+          279.57deg,
+          $primary-secondary 0%,
+          $primary 100%
+        ),
+        $primary;
+      @include media-breakpoint-down(md) {
+        background: none !important;
+      }
+    }
+    & > div {
+      width: 240px;
+      @media (max-width: 678px) {
+          width: 200px !important;
+        }
+      margin: 4px 0px 4px 0px;
+      padding: 16px 0px;
+      border-radius: 4px;
+      background: white;
+      & > div {
+        height: inherit;
+      }
+      p {
+        font-size: 14px;
+        line-height: 16px;
+        color: #5e646a;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+        color: #5e646a;
+        margin-bottom: 4px;
+      }
+      .value {
+        &-growth {
+          margin-bottom: 4px;
+          span {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+        &-compare {
+          font-size: 12px;
+          line-height: 16px;
+          color: #93989b;
+        }
+      }
+    }
+    .media-content {
+      height: 350px;
+      & > div p {
+        font-weight: 500 !important;
+        color: #5e646a !important;
+      }
+      &-performa {
+        min-height: 145px;
+      }
+      &-button {
+        min-height: 65px;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 0;
+        height: 300px;
+      }
+
+      &__image {
+        object-fit: contain;
+        width: 200px;
+        height: 200px;
+
+        &-sm {
+          @extend .media-content__image;
+          max-width: 160px;
+          max-height: 160px;
+        }
+      }
+    }
+  }
+  .media-caption {
+    display: -webkit-box;
+    max-height: 95px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 0 21px;
+
+    @media (max-width: 500px) {
+      padding: 0 3px !important;
+      width: 165.7px;
+    }
+  }
+}
+
+.dashboard-kompetitor-top-hashtag {
+  .top-hashtag-container {
+    @include media-breakpoint-down(md) {
+      background: none;
+    }
+    background: #f4f5f5;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: fit-content;
+    &.main-account {
+      background: linear-gradient(
+          279.57deg,
+          $primary-secondary 0%,
+          $primary 100%
+        ),
+        $primary;
+      @include media-breakpoint-down(md) {
+        background: none !important;
+      }
+    }
+
+    .hashtag {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+    }
+
+    & > div {
+      width: 240px;
+      @media (max-width: 678px) {
+          width: 200px !important;
+        }
+      height: 105px;
+      margin: 4px 0px 4px 0px;
+      padding: 32px 24px 17px 24px;
+      border-radius: 4px;
+      background: white;
+      & > div {
+        height: inherit;
+      }
+    }
+  }
+}

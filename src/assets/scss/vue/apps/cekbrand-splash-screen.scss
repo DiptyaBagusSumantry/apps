@@ -1,0 +1,139 @@
+@import '@core/scss/base/bootstrap-extended/include';
+
+#splash-screen-modal {
+  .swiper-splash-screen {
+    max-width: 1240px;
+    background-color: #fff;
+    border-radius: 8px;
+    .bg-image-competitor,
+    .bg-image-statistic,
+    .bg-image-post {
+      padding: 40px 28px 0px;
+    }
+    .bg-image-competitor {
+      background-image: url('~@/assets/images/pages/cekbrand/splash-screen/splash-screen-competitor.png');
+    }
+    .bg-image-statistic {
+      background-image: url('~@/assets/images/pages/cekbrand/splash-screen/splash-screen-statistic.png');
+    }
+    .bg-image-post {
+      background-image: url('~@/assets/images/pages/cekbrand/splash-screen/splash-screen-post.png');
+    }
+    .btn-skip {
+      background-image: linear-gradient(299.9deg, #FF7C6E 0%, #F5317F 100%);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      padding: 0px !important;
+      margin: 0px !important;
+      .transparent-color-1 {
+        color: #F5317F;
+        opacity: 1;
+      }
+      .transparent-color-2 {
+        color: #F5317F;
+        opacity: 0.6;
+      }
+      .transparent-color-3 {
+        color: #F5317F;
+        opacity: 0.4;
+      }
+    }
+    .btn-enter {
+      .transparent-color-1 {
+        opacity: 1;
+      }
+      .transparent-color-2 {
+        opacity: 0.6;
+      }
+      .transparent-color-3 {
+        opacity: 0.4;
+      }
+    }
+    .swiper {
+      &-button {
+        &-disabled {
+          display: none;
+        }
+        &-next,
+        &-prev {
+          border-radius: 100%;
+          background: linear-gradient(
+              279.9deg,
+              rgba(245, 49, 127, 0) 0%,
+              #F5317F 100%
+            ),
+            #FF7C6E;
+          width: 36px;
+          height: 36px;
+          &:after {
+            font-size: 10px !important;
+            font-weight: 600;
+            color: white !important;
+          }
+        }
+        &-next {
+          right: 0 !important;
+          margin-right: 20px;
+          &:after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='0' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          }
+          @include media-breakpoint-down(md) {
+            margin-right: 10px;
+          }
+        }
+        &-prev {
+          left: 0 !important;
+          margin-left: 20px;
+          &:after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='0' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-left'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E") !important;
+          }
+          @include media-breakpoint-down(md) {
+            margin-left: 10px;
+          }
+        }
+      }
+      &-pagination {
+        bottom: 80% !important;
+        z-index: 2;
+        &-bullet {
+          border-radius: 5px;
+          width: 10px;
+          height: 8px;
+          &-active {
+            background: linear-gradient(90deg, #70ADD9 0%, #368AC8 100%), #368AC8 !important;
+            width: 30px;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          bottom: 70% !important;
+        }
+      }
+    }
+  }
+
+  // Modal
+  .modal {
+    &-body {
+      padding: 0px 0px !important;
+    }
+    &-header {
+      display: none !important;
+    }
+    &-content {
+      max-width: 1240px;
+    }
+    &-dialog {
+      display: flex;
+      justify-content: center;
+    }
+    .swiper-slide {
+      @include media-breakpoint-down(md) {
+        height: 600px !important;
+      }
+    }
+  }
+}

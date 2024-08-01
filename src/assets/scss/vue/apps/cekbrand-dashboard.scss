@@ -1,0 +1,174 @@
+@import '~@core/scss/base/bootstrap-extended/include';
+@import '~@core/scss/base/bootstrap-extended/utilities';
+
+.cekbrand-dashboard {
+  &-header {
+    padding-left: 0px;
+
+    > div {
+      /* Tab item padding */
+      padding-left: 1rem;
+    }
+
+    .account-list {
+      .b-dropdown {
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          padding: 0;
+          margin-bottom: 0;
+
+          &::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393989B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            transform: scale(1);
+            transition-timing-function: cubic-bezier(1, -0.115, 0.975, 0.855);
+            transition: transform 150ms cubic-bezier(1, -0.115, 0.975, 0.855);
+          }
+
+          .account-username {
+            color: $black;
+            -webkit-text-fill-color: $black; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 0.3px;
+            -webkit-text-stroke-color: $black;
+          }
+        }
+
+        &.show {
+          .dropdown-toggle::after {
+            transform: rotate(180deg) scale(1);
+          }
+        }
+      }
+
+      &__username {
+        width: max-content;
+        max-width: 170px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .account-data {
+      .text-muted {
+        color: $gray-500 !important;
+      }
+
+      .filter-data .b-dropdown {
+        .dropdown-toggle {
+          display: flex;
+          min-width: 286px;
+          background: white !important;
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13);
+          border-color: transparent !important;
+          border-radius: 5px;
+          padding-left: 12px;
+
+          @include media-breakpoint-down(md) {
+            min-width: 220px;
+          }
+
+          &::after {
+            margin-left: auto;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393989B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            transform: scale(1);
+            transition-timing-function: cubic-bezier(1, -0.115, 0.975, 0.855);
+            transition: transform 150ms cubic-bezier(1, -0.115, 0.975, 0.855);
+          }
+        }
+
+        &.show {
+          .dropdown-toggle::after {
+            transform: rotate(180deg) scale(1);
+          }
+        }
+
+        .dropdown-item {
+          &.active {
+            font-weight: 500;
+
+            .flatpickr-input {
+              font-weight: 500;
+              color: white !important;
+            }
+          }
+          &.disabled .flatpickr-input::placeholder {
+            color: $nav-link-disabled-color;
+          }
+
+          &:hover, &:focus-within {
+            background-color: $dropdown-link-hover-bg !important;
+            .flatpickr-input::placeholder {
+              color: $primary !important;
+            }
+          }
+
+          .flatpickr-input {
+            padding: 0;
+            display: block;
+            width: 100%;
+
+            &::placeholder {
+              color: $black;
+            }
+
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+      }
+
+      .download-data .b-dropdown {
+        .dropdown-toggle.btn {
+          padding: 6px 14px;
+          @include media-breakpoint-down(xs) {
+            padding: 6px;
+          }
+        }
+      }
+    }
+  }
+  &-container {
+    min-width: 400px;
+
+    &.tabs .nav-tabs .nav-link {
+      @extend .font-medium-1;
+
+      &.active {
+        font-weight: $font-weight-bolder;
+        @extend .font-medium-2;
+      }
+
+      &[aria-selected='false'] {
+        font-weight: 400;
+        color: $gray-500;
+      }
+    }
+
+    .card-header {
+      svg.text-muted {
+        color: $gray-250 !important;
+      }
+    }
+
+    .card-body .card {
+      background: white;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.13) !important;
+      &.post-card {
+        box-shadow: none !important;
+      }
+      border-radius: 4px;
+    }
+  }
+
+  &-popover {
+    .popover-header,
+    .popover-body {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .popover-body {
+      color: #6e6b7b;
+    }
+  }
+}

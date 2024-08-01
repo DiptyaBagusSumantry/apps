@@ -1,0 +1,57 @@
+@import '@/assets/scss/variables/variables';
+
+.main-menu {
+  &.menu-fixed.menu-accordion {
+    top: 0;
+  }
+  .navigation {
+    a:after {
+      display: none !important;
+    }
+    li {
+      &.active > a {
+        background: $gradient-primary !important;
+        box-shadow: none !important;
+        .feather {
+          stroke: white;
+        }
+        .menu-title {
+          color: white;
+        }
+      }
+
+      a {
+        border-radius: 4px;
+        margin: 10px 15px !important;
+      }
+    }
+    .menu-title {
+      color: rgba($black, 0.5);
+      font-size: $font-size-base;
+      font-weight: $font-weight-bolder;
+    }
+    .nav-item.has-sub > .menu-content {
+      display: block !important;
+      margin-left: 30px;
+
+      li > a {
+        margin: 10px 0px !important;
+      }
+    }
+  }
+  .navbar-brand {
+    margin: 0px !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-sticky {
+    .main-menu {
+      top: 70px !important;
+
+      .navbar-header {
+        display: none;
+      }
+    }
+  }
+}

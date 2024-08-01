@@ -1,0 +1,11 @@
+@import '@core/scss/base/bootstrap-extended/include';
+@import '@core/scss/base/components/include';
+
+.header-navbar {
+  .navbar-container {
+    // Add more horizontal padding above small screen
+    @include media-breakpoint-up(lg) {
+      padding: 0.8rem 7.5rem !important;
+    }
+  }
+}
